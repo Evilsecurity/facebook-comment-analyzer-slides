@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+.slide-container{width:1280px;min-height:720px;background:#e8ecef;color:#2c3e50;padding:58px 72px 0;font-family:Georgia,serif}
+.kicker{font:700 16px monospace;color:#27ae60;letter-spacing:1px}
+.title{font:700 40px monospace;margin:10px 0 28px}
+.intro{font-size:22px;color:#34495e;margin:0 0 26px;line-height:1.45}
+.table{width:100%;border-top:2px solid #2c3e50}
+.row{display:grid;grid-template-columns:2fr .75fr 3fr 2fr;align-items:center;min-height:70px;border-bottom:1px dashed #9aa7ad;column-gap:24px}
+.header{min-height:42px;font:700 15px monospace;color:#27ae60}
+.cell{font-size:21px;color:#34495e}
+.weight{font:700 28px monospace;color:#2c3e50;text-align:center;direction:ltr}
+.rule{font-size:19px;line-height:1.3}
+.bar-wrap{height:16px;width:230px;border:1px solid #7f8c8d;direction:ltr}
+.bar{height:100%;background:#27ae60}
+.b30{width:230px}.b20{width:153px}.b15{width:115px}
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:28px;border-top:2px solid #2c3e50;padding-top:18px}
+.total{font:700 28px monospace;color:#2c3e50;direction:ltr}.note{font-size:20px;color:#34495e;max-width:650px;line-height:1.4}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <div class="kicker">04 / SCORING MODEL</div>
+  <h1 class="title">خوارزمية النقاط: 100 نقطة قابلة للتفسير</h1>
+  <p class="intro">كل إشارة تضيف وزنًا مستقلًا؛ والنتيجة النهائية تُعرض مع أسبابها بدل إخفائها خلف نموذج غامض.</p>
+  <div class="table">
+    <div class="row header"><div>الإشارة</div><div>الوزن</div><div>قاعدة التقييم</div><div>الوزن النسبي</div></div>
+    <div class="row"><div class="cell">عدد الأصدقاء</div><div class="weight">30</div><div class="cell rule">أكثر من 100 = كامل؛ 50–100 = جزئي؛ أقل من 50 = صفر</div><div class="bar-wrap"><div class="bar b30"></div></div></div>
+    <div class="row"><div class="cell">صورة الملف الشخصي</div><div class="weight">20</div><div class="cell rule">صورة غير افتراضية = 20</div><div class="bar-wrap"><div class="bar b20"></div></div></div>
+    <div class="row"><div class="cell">عمر الحساب</div><div class="weight">20</div><div class="cell rule">أقدم من سنة = 20؛ أقدم من شهر = 10</div><div class="bar-wrap"><div class="bar b20"></div></div></div>
+    <div class="row"><div class="cell">نشاط المنشورات</div><div class="weight">15</div><div class="cell rule">وجود نشاط قابل للجلب = 15</div><div class="bar-wrap"><div class="bar b15"></div></div></div>
+    <div class="row"><div class="cell">نص التعليق</div><div class="weight">15</div><div class="cell rule">خصم عند التكرار أو الروابط المشبوهة</div><div class="bar-wrap"><div class="bar b15"></div></div></div>
+  </div>
+  <div class="footer"><div class="total">30 + 20 + 20 + 15 + 15 = 100</div><div class="note">عند غياب بيانات API، تُترك الإشارة بقيمة صفرية مع تسجيل تحذير واستخدام تحليل النص كـ fallback.</div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box}
+.slide-container{width:1280px;min-height:720px;background:#e8ecef;color:#2c3e50;padding:58px 72px 0;font-family:Georgia,serif}
+.header{display:flex;justify-content:space-between;align-items:end;border-bottom:1px dashed #7f8c8d;padding-bottom:20px}
+.kicker{font:700 16px monospace;color:#27ae60;letter-spacing:1px}
+.title{font:700 42px monospace;margin:10px 0 0;line-height:1.2}
+.code{font:700 16px monospace;color:#34495e;direction:ltr}
+.path{display:grid;grid-template-columns:1fr 70px 1fr 70px 1fr;align-items:center;direction:ltr;margin-top:75px}
+.point{direction:rtl;min-height:235px;border-top:4px solid #2c3e50;padding:20px 18px 0 8px}
+.point:nth-child(3){border-top-color:#27ae60}
+.point:nth-child(5){border-top-color:#e67e22}
+.number{font:700 18px monospace;color:#27ae60;margin-bottom:20px}
+.point h2{font:700 28px monospace;line-height:1.2;margin:0 0 18px}
+.point p{font-size:23px;line-height:1.5;color:#34495e;margin:0}
+.arrow{font:700 34px monospace;color:#27ae60;text-align:center;direction:ltr}
+.footer{margin-top:54px;border-top:2px solid #2c3e50;padding-top:22px;display:flex;justify-content:space-between;align-items:start;gap:40px}
+.footer-label{font:700 18px monospace;color:#2c3e50;direction:ltr}
+.footer-text{font-size:25px;line-height:1.4;color:#34495e;max-width:780px;margin:0}
+.footer-text strong{color:#27ae60}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <div class="header">
+    <div><div class="kicker">10 / الرسالة الأخيرة</div><h1 class="title">الخلاصة</h1></div>
+    <div class="code">DATA → SIGNAL → REVIEW</div>
+  </div>
+
+  <div class="path">
+    <section class="point">
+      <div class="number">01</div>
+      <h2>إشارات قابلة للمقارنة</h2>
+      <p>تحوّل الأداة التعليقات غير المنظمة إلى بيانات يمكن فرزها ومقارنتها.</p>
+    </section>
+    <div class="arrow">→</div>
+    <section class="point">
+      <div class="number">02</div>
+      <h2>نقاط قابلة للتفسير</h2>
+      <p>توازن بين بيانات الحساب وسلوك النص، وتعرض سبب كل خصم.</p>
+    </section>
+    <div class="arrow">→</div>
+    <section class="point">
+      <div class="number">03</div>
+      <h2>مراجعة مسؤولة</h2>
+      <p>يحافظ الـ fallback على الفائدة عند نقص الصلاحيات، دون ادعاء اليقين.</p>
+    </section>
+  </div>
+
+  <div class="footer">
+    <div class="footer-label">OPERATING PRINCIPLE</div>
+    <p class="footer-text"><strong>التصنيف يحدد أين يبدأ المحلل،</strong> ولا يثبت أن الحساب حقيقي أو وهمي بصورة قطعية.</p>
+  </div>
+</div>
+</body>
+</html>

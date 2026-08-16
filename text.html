@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+.slide-container{width:1280px;min-height:720px;background:#e8ecef;color:#2c3e50;font-family:Georgia,serif}
+.inner{padding:58px 72px 0}
+.header{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px dashed #7f8c8d;padding-bottom:18px}
+.kicker{font:700 16px monospace;color:#27ae60;letter-spacing:.5px}
+.title{font:700 38px monospace;margin:10px 0 0;line-height:1.2}
+.phase-label{font:700 15px monospace;color:#34495e;direction:ltr}
+.pipeline{display:grid;grid-template-columns:1fr 72px 1fr 72px 1fr;align-items:stretch;direction:ltr;margin-top:40px}
+.step{direction:rtl;min-height:220px;padding:0 18px 0 12px;border-top:4px solid #2c3e50}
+.step-number{font:700 18px monospace;color:#27ae60;margin-top:20px}
+.step-title{font:700 27px monospace;margin:18px 0 18px;line-height:1.15}
+.step-text{font-size:22px;line-height:1.5;color:#34495e;margin:0}
+.arrow{font:700 32px monospace;color:#27ae60;display:flex;align-items:center;justify-content:center;direction:ltr}
+.snippet{font:18px monospace;color:#2c3e50;line-height:1.65;margin-top:16px;direction:ltr;text-align:left}
+.alert{margin-top:34px;border-top:1px dashed #7f8c8d;border-bottom:1px dashed #7f8c8d;padding:14px 0 12px;display:grid;grid-template-columns:185px 1fr;column-gap:28px;align-items:center}
+.alert-label{font:700 17px monospace;color:#e67e22;direction:ltr}
+.alert-text{font-size:22px;line-height:1.4;color:#34495e}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <div class="inner">
+    <div class="header">
+      <div>
+        <div class="kicker">05 / إشارة سلوكية</div>
+        <h1 class="title">تحليل النص يلتقط إشارات السلوك المتكرر</h1>
+      </div>
+      <div class="phase-label">TEXT SCORE / 15</div>
+    </div>
+
+    <div class="pipeline">
+      <section class="step">
+        <div class="step-number">01</div>
+        <h2 class="step-title">توحيد النص</h2>
+        <p class="step-text">إزالة المسافات الزائدة وتحويل النص إلى صيغة موحدة حتى يمكن مقارنته.</p>
+        <div class="snippet">"عرض   خاص"<br>→ "عرض خاص"</div>
+      </section>
+      <div class="arrow">→</div>
+      <section class="step">
+        <div class="step-number">02</div>
+        <h2 class="step-title">رصد النمط</h2>
+        <p class="step-text">تكرار الرسالة نفسها بين التعليقات يضيف إشارة تحذيرية، وكذلك الروابط.</p>
+        <div class="snippet">count(message) &gt; 1</div>
+      </section>
+      <div class="arrow">→</div>
+      <section class="step">
+        <div class="step-number">03</div>
+        <h2 class="step-title">خصم محدود</h2>
+        <p class="step-text">يُخصم جزء من نقاط النص فقط، مع حفظ السبب في التقرير.</p>
+        <div class="snippet">repeated: -3…-8<br>suspicious URL: -7</div>
+      </section>
+    </div>
+
+    <div class="alert">
+      <div class="alert-label">CAUTION / تفسير</div>
+      <div class="alert-text">وجود رابط عادي أو نص متكرر لا يثبت أن الحساب وهمي؛ تحليل النص مؤشر مساعد ضمن مجموع نقاط أكبر.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

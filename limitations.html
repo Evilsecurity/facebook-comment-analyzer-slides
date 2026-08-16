@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box}
+.slide-container{width:1280px;min-height:720px;background:#e8ecef;color:#2c3e50;padding:58px 72px 0;font-family:Georgia,serif}
+.header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px dashed #7f8c8d;padding-bottom:18px}
+.kicker{font:700 16px monospace;color:#27ae60;letter-spacing:1px}
+.title{font:700 39px monospace;margin:10px 0 0;line-height:1.2}
+.label{font:700 16px monospace;color:#e67e22;direction:ltr}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:62px;margin-top:48px;direction:ltr}
+.column{direction:rtl;min-height:255px;border-top:4px solid #2c3e50;padding-top:18px}
+.column.missing{border-top-color:#e67e22}
+.column h2{font:700 27px monospace;margin:0 0 22px;line-height:1.2}
+.column ul{list-style:none;margin:0;padding:0}
+.column li{font-size:21px;line-height:1.48;color:#34495e;margin:0 0 17px;padding-right:25px;position:relative}
+.column li:before{content:'+';position:absolute;right:0;color:#27ae60;font:700 22px monospace}
+.missing li:before{content:'?';color:#e67e22}
+.note{margin-top:42px;border-top:2px solid #2c3e50;border-bottom:1px dashed #7f8c8d;padding:17px 0 15px;display:grid;grid-template-columns:215px 1fr;gap:32px;align-items:center}
+.note-label{font:700 17px monospace;color:#e67e22;direction:ltr}
+.note-text{font-size:23px;line-height:1.4;color:#34495e}
+.note-text strong{color:#2c3e50}
+.footer{margin-top:28px;display:flex;justify-content:space-between;align-items:center;color:#34495e;font-size:20px}
+.footer .code{font:700 16px monospace;color:#2c3e50;direction:ltr}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <div class="header">
+    <div><div class="kicker">08 / قراءة مسؤولة للنتيجة</div><h1 class="title">القيود: أداة فرز وليست أداة إثبات</h1></div>
+    <div class="label">LIMITS / PRIVACY / ACCESS</div>
+  </div>
+
+  <div class="columns">
+    <section class="column">
+      <h2>ما يمكن استخدامه</h2>
+      <ul>
+        <li>هوية التعليق، نص الرسالة، ووقت الإنشاء عندما تسمح الصلاحيات.</li>
+        <li>مقارنة النصوص واكتشاف التكرار والروابط كمؤشرات سلوكية.</li>
+        <li>تسجيل الدرجة والأسباب حتى يستطيع المحلل مراجعة القرار.</li>
+      </ul>
+    </section>
+    <section class="column missing">
+      <h2>ما قد لا يتاح</h2>
+      <ul>
+        <li>عدد الأصدقاء الحقيقي وتاريخ إنشاء حسابات المعلقين الآخرين.</li>
+        <li>بعض الحقول أو المنشورات بسبب التوكن والخصوصية وإصدار API.</li>
+        <li>البيانات الناقصة؛ عندها يستخدم السكربت قيمة محايدة وfallback.</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="note">
+    <div class="note-label">CAUTION / NO CERTAINTY</div>
+    <div class="note-text"><strong>الحساب الحقيقي</strong> قد يكرر نصًا، و<strong>الحساب الوهمي</strong> قد يملك صورة أو نشاطًا؛ لذلك يجب استخدام التصنيف لتحديد الأولويات ثم إجراء مراجعة بشرية مستقلة.</div>
+  </div>
+
+  <div class="footer"><span>الدرجة تعكس الإشارات المتاحة فقط، لا حقيقة هوية المستخدم.</span><span class="code">heuristic ≠ proof</span></div>
+</div>
+</body>
+</html>

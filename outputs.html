@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0}
+.slide-container{width:1280px;min-height:720px;background:#e8ecef;color:#2c3e50;padding:48px 72px 0;font-family:Georgia,serif}
+.kicker{font:700 16px monospace;color:#27ae60;letter-spacing:1px}
+.title{font:700 40px monospace;margin:10px 0 0;line-height:1.2}
+.header{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px dashed #7f8c8d;padding-bottom:20px}
+.code-label{font:700 16px monospace;color:#34495e;direction:ltr}
+.outputs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;direction:rtl;margin-top:30px}
+.output{min-height:200px;border-top:4px solid #2c3e50;padding-top:12px}
+.output:nth-child(2){border-top-color:#27ae60}.output:nth-child(3){border-top-color:#27ae60}.output:nth-child(4){border-top-color:#e67e22}
+.file{font:700 22px monospace;color:#2c3e50;direction:ltr;text-align:right}
+.output h2{font:700 25px monospace;margin:14px 0 10px;line-height:1.2}
+.output p{font-size:20px;color:#34495e;line-height:1.45;margin:0}
+.sample{margin-top:8px;font:16px monospace;color:#27ae60;direction:ltr;text-align:left;line-height:1.4}
+.log{margin-top:16px;border-top:1px dashed #7f8c8d;border-bottom:1px dashed #7f8c8d;padding:12px 0 10px;display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:center}
+.log-name{font:700 18px monospace;color:#e67e22;direction:ltr}
+.log p{font-size:21px;color:#34495e;line-height:1.4;margin:0}
+.command{margin-top:12px;background:#2c3e50;color:#e8ecef;padding:14px 18px;font:18px monospace;direction:ltr;text-align:left;line-height:1.5}
+.command span{color:#27ae60}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <div class="header">
+    <div><div class="kicker">07 / من التحليل إلى الاستخدام</div><h1 class="title">المخرجات تجعل النتيجة قابلة للاستخدام</h1></div>
+    <div class="code-label">REPORTING LAYER</div>
+  </div>
+
+  <div class="outputs">
+    <section class="output"><div class="file">TERMINAL</div><h2>جدول ASCII</h2><p>مراجعة فورية للحسابات، الأسماء، الدرجات والتصنيف داخل الطرفية.</p><div class="sample">score | class | reasons</div></section>
+    <section class="output"><div class="file">report_*.csv</div><h2>تحليل جدولي</h2><p>فتح النتائج في Excel أو إعادة تحليلها باستخدام pandas.</p><div class="sample">rows × columns</div></section>
+    <section class="output"><div class="file">report_*.json</div><h2>تكامل برمجي</h2><p>صيغة مناسبة للأنظمة اللاحقة، الأرشفة، أو بناء لوحة متابعة.</p><div class="sample">{ "score": 72 }</div></section>
+    <section class="output"><div class="file">chart.png</div><h2>رؤية سريعة</h2><p>مقارنة أعداد وهمي، مشبوه، وحقيقي بصريًا.</p><div class="sample">fake / suspect / real</div></section>
+  </div>
+
+  <div class="log"><div class="log-name">error.log</div><p>يوثق أخطاء الشبكة، انتهاء التوكن، الصلاحيات، وRate Limits بدل إخفائها عن المحلل.</p></div>
+
+  <div class="command"><span>$</span> python fb_analyzer.py --url <span>"POST_URL"</span> --delay 0.8</div>
+</div>
+</body>
+</html>

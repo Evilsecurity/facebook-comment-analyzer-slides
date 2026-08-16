@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box}
+body{margin:0}
+.slide-container{width:1280px;min-height:720px;background:#e8ecef;color:#2c3e50;padding:58px 72px 0;font-family:Georgia,serif}
+.header{display:flex;justify-content:space-between;align-items:end;border-bottom:1px dashed #7f8c8d;padding-bottom:20px}
+.kicker{font:700 16px monospace;color:#27ae60;letter-spacing:1px}
+.title{font:700 40px monospace;margin:10px 0 0;line-height:1.2}
+.label{font:700 16px monospace;color:#34495e;direction:ltr}
+.path{display:grid;grid-template-columns:1fr 54px 1fr 54px 1fr 54px 1fr;align-items:stretch;direction:ltr;margin-top:58px}
+.step{direction:rtl;min-height:240px;border-top:4px solid #2c3e50;padding:20px 18px 0}
+.step:nth-child(5){border-top-color:#e67e22}
+.num{font:700 18px monospace;color:#27ae60;margin-bottom:17px}
+.step h2{font:700 25px monospace;margin:0 0 15px;line-height:1.2}
+.step p{font-size:21px;color:#34495e;line-height:1.48;margin:0}
+.code{font:17px monospace;color:#27ae60;direction:ltr;text-align:left;line-height:1.65;margin-top:16px}
+.arrow{font:700 32px monospace;color:#27ae60;text-align:center;padding-top:82px;direction:ltr}
+.warning{margin-top:44px;border-top:1px dashed #7f8c8d;border-bottom:1px dashed #7f8c8d;padding:17px 0 15px;display:grid;grid-template-columns:210px 1fr;gap:30px;align-items:center}
+.warning strong{font:700 17px monospace;color:#e67e22;direction:ltr}
+.warning p{font-size:22px;color:#34495e;line-height:1.42;margin:0}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <div class="header">
+    <div><div class="kicker">08 / OPERATIONAL RESILIENCE</div><h1 class="title">الحماية والمرونة عند فشل API</h1></div>
+    <div class="label">FAILURE → LOG → FALLBACK</div>
+  </div>
+  <div class="path">
+    <section class="step"><div class="num">01</div><h2>حماية التوكن</h2><p>قراءة <b>ACCESS_TOKEN</b> من البيئة أو `.env`، وعدم كتابته داخل الكود أو التقارير.</p><div class="code">os.getenv("ACCESS_TOKEN")</div></section>
+    <div class="arrow">→</div>
+    <section class="step"><div class="num">02</div><h2>ضبط الطلبات</h2><p>تأخير بين الاستدعاءات ومتابعة pagination لتقليل الضغط على API.</p><div class="code">time.sleep(delay)</div></section>
+    <div class="arrow">→</div>
+    <section class="step"><div class="num">03</div><h2>تفسير الخطأ</h2><p>التقاط انتهاء التوكن والصلاحيات وRate Limits داخل `error.log`.</p><div class="code">OAuth / HTTP / KeyError</div></section>
+    <div class="arrow">→</div>
+    <section class="step"><div class="num">04</div><h2>Fallback واضح</h2><p>عند غياب حقل، لا يتوقف التحليل كله؛ تُستخدم القيمة المتاحة ويُسجل التحذير.</p><div class="code">available data + text</div></section>
+  </div>
+  <div class="warning"><strong>DEGRADED MODE</strong><p>إذا تعذر جلب عدد الأصدقاء أو عمر الحساب بسبب صلاحيات Graph API، تصبح النتيجة مؤشرًا مبنيًا على الصورة والنشاط والنص فقط، مع إبقاء السبب ظاهرًا للمراجع.</p></div>
+</div>
+</body>
+</html>

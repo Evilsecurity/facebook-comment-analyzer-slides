@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box}
+.slide-container{width:1280px;min-height:720px;background:#e8ecef;color:#2c3e50;padding:58px 72px 0;font-family:Georgia,serif}
+.header{display:flex;justify-content:space-between;align-items:end;border-bottom:1px dashed #7f8c8d;padding-bottom:20px}
+.kicker{font:700 16px monospace;color:#27ae60;letter-spacing:1px}
+.title{font:700 40px monospace;margin:10px 0 0}
+.label{font:700 16px monospace;color:#34495e;direction:ltr}
+.refs{margin-top:40px;border-top:2px solid #2c3e50}
+.ref{display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:center;min-height:86px;border-bottom:1px dashed #9aa7ad}
+.num{font:700 24px monospace;color:#27ae60;direction:ltr;text-align:center}
+.ref h2{font:700 24px monospace;margin:0 0 8px;line-height:1.2}
+.ref a{font:17px monospace;color:#34495e;direction:ltr;display:block;text-align:left;text-decoration:none}
+.note{margin-top:40px;border-top:2px solid #2c3e50;padding-top:20px;display:flex;justify-content:space-between;gap:40px;align-items:start}
+.note strong{font:700 17px monospace;color:#2c3e50;direction:ltr}
+.note p{font-size:22px;line-height:1.45;color:#34495e;margin:0;max-width:800px}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <div class="header">
+    <div><div class="kicker">11 / SOURCES</div><h1 class="title">مراجع مختارة</h1></div>
+    <div class="label">META FOR DEVELOPERS</div>
+  </div>
+  <div class="refs">
+    <div class="ref"><div class="num">[1]</div><div><h2>Graph API Overview</h2><a href="https://developers.facebook.com/docs/graph-api/overview/">developers.facebook.com/docs/graph-api/overview/</a></div></div>
+    <div class="ref"><div class="num">[2]</div><div><h2>Paginated Results</h2><a href="https://developers.facebook.com/docs/graph-api/results/">developers.facebook.com/docs/graph-api/results/</a></div></div>
+    <div class="ref"><div class="num">[3]</div><div><h2>User Reference</h2><a href="https://developers.facebook.com/docs/graph-api/reference/user/">developers.facebook.com/docs/graph-api/reference/user/</a></div></div>
+    <div class="ref"><div class="num">[4]</div><div><h2>User Friends Reference</h2><a href="https://developers.facebook.com/docs/graph-api/reference/user/friends/">developers.facebook.com/docs/graph-api/reference/user/friends/</a></div></div>
+  </div>
+  <div class="note"><strong>REFERENCE NOTE</strong><p>قد تتغير الحقول والصلاحيات بمرور الوقت؛ يجب اختبار التوكن وإصدار Graph API الفعلي قبل استخدام الأداة في بيئة إنتاج.</p></div>
+</div>
+</body>
+</html>

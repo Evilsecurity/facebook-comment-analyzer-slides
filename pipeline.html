@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box}
+.slide-container{width:1280px;min-height:720px;background:#e8ecef;color:#2c3e50;padding:52px 72px 0;font-family:Georgia,serif}
+.kicker{font:700 16px monospace;color:#27ae60;letter-spacing:1px}
+.title{font:700 40px monospace;margin:10px 0 0;line-height:1.2}
+.rule{border-top:1px dashed #7f8c8d;margin-top:20px}
+.flow{display:grid;grid-template-columns:180px 54px 180px 54px 180px 54px 180px 54px 180px;align-items:start;direction:ltr;margin-top:48px}
+.step{direction:rtl;min-height:150px;border-top:4px solid #2c3e50;padding-top:12px}
+.num{font:700 24px monospace;color:#27ae60;margin-bottom:10px}
+.step h2{font:700 22px monospace;margin:0 0 10px;line-height:1.25}
+.step p{font-size:20px;color:#34495e;line-height:1.5;margin:0}
+.code{font:16px monospace;color:#27ae60;direction:ltr;text-align:right;line-height:1.65;margin-top:8px}
+.arrow{font:700 32px monospace;color:#27ae60;text-align:center;padding-top:30px;direction:ltr}
+.note{margin-top:12px;border-top:1px dashed #7f8c8d;padding-top:8px;display:flex;justify-content:space-between;align-items:start;gap:36px}
+.note strong{font:700 19px monospace;color:#2c3e50;direction:ltr;display:block}
+.note p{font-size:21px;color:#34495e;line-height:1.45;margin:0;max-width:800px}
+</style>
+</head>
+<body>
+<div class="slide-container">
+  <div class="kicker">03 / من الرابط إلى القرار</div>
+  <h1 class="title">تدفق البيانات من الرابط إلى التقرير</h1>
+  <div class="rule"></div>
+  <div class="flow">
+    <div class="step"><div class="num">01</div><h2>استخراج المعرّف</h2><p>قراءة رابط المنشور واستخراج <b>post_id</b>.</p><div class="code">extract_post_id()</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="num">02</div><h2>جلب التعليقات</h2><p>قراءة الحقول المطلوبة من Graph API.</p><div class="code">from / message<br>created_time</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="num">03</div><h2>Pagination</h2><p>متابعة كل صفحة حتى غياب الرابط التالي.</p><div class="code">paging.next</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="num">04</div><h2>التحليل</h2><p>تجميع الحسابات الفريدة وحساب المؤشرات.</p><div class="code">score + reasons</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="num">05</div><h2>المخرجات</h2><p>تصنيف قابل للمراجعة وتصدير النتائج.</p><div class="code">CSV / JSON / PNG</div></div>
+  </div>
+  <div class="note"><strong>CURSOR PAGINATION</strong><p>لا يعني وصول صفحة بأقل من الحد أن البيانات انتهت؛ الإشارة المعتمدة هي غياب <b>paging.next</b>.</p></div>
+</div>
+</body>
+</html>

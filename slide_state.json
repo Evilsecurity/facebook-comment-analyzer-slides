@@ -1,0 +1,144 @@
+{
+  "project_info": {
+    "title": "Facebook Comment Analyzer",
+    "created": 1786915131.172,
+    "last_updated": 1786915577.849,
+    "total_slides": 12
+  },
+  "slides": [
+    {
+      "id": "cover",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "problem",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "tool",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "pipeline",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "scoring",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "text",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "classification",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "outputs",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "resilience",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "limitations",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "summary",
+      "state": "edited",
+      "pageNum": 11
+    },
+    {
+      "id": "references",
+      "state": "edited",
+      "pageNum": 12
+    }
+  ],
+  "outline": [
+    {
+      "id": "cover",
+      "title": "Facebook Comment Analyzer",
+      "summary": "عرض توضيحي عربي يعرّف الأداة ودورها في تحليل تعليقات منشور فيسبوك ورصد الحسابات غير الموثوقة.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "problem",
+      "title": "المشكلة: التعليق لا يكشف الحقيقة وحده",
+      "summary": "لماذا نحتاج إلى مؤشر أولي قابل للتفسير بدل المراجعة اليدوية وحدها.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "tool",
+      "title": "ما الذي تفعله الأداة؟",
+      "summary": "مدخلات الأداة ووظيفتها الأساسية من الرابط إلى التصنيف.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "pipeline",
+      "title": "تدفق البيانات من الرابط إلى التقرير",
+      "summary": "مراحل استخراج post_id وجلب التعليقات وتحليلها وإنتاج المخرجات.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "scoring",
+      "title": "خوارزمية النقاط: 100 نقطة قابلة للتفسير",
+      "summary": "جدول الأوزان الخمسة التي تكوّن مجموع الثقة.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "text",
+      "title": "تحليل النص يلتقط إشارات السلوك المتكرر",
+      "summary": "تطبيع النصوص، اكتشاف التكرار والروابط، وحدود الخصم.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "classification",
+      "title": "من الدرجة إلى التصنيف",
+      "summary": "حدود التصنيف الثلاثة وكيفية تفسيرها عمليًا.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "outputs",
+      "title": "المخرجات تجعل النتيجة قابلة للاستخدام",
+      "summary": "التقارير النصية والملفات والرسم البياني وسجل الأخطاء مع مثال تشغيل مختصر.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "resilience",
+      "title": "الحماية والمرونة عند فشل API",
+      "summary": "إدارة التوكن والصلاحيات وRate Limits وfallback.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "limitations",
+      "title": "القيود: أداة فرز وليست أداة إثبات",
+      "summary": "حدود Graph API ومخاطر تفسير التصنيف كحقيقة قطعية.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "summary",
+      "title": "الخلاصة",
+      "summary": "أهم الرسائل العملية حول استخدام الأداة بمسؤولية.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "references",
+      "title": "مراجع مختارة",
+      "summary": "مصادر Meta الرسمية المتعلقة بـ Graph API وpagination وUser وfriends.",
+      "image_plan": "Use a suitable image if needed"
+    }
+  ]
+}
